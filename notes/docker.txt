@@ -15,3 +15,10 @@ docker exec -it postgres15 createdb --username=root --owner=root simple_bank
 
 mkdir -p db/query db/sqlc
 
+sqlc init
+sqlc generate
+
+
+go get github.com/lib/pq
+go get github.com/stretchr/testify
+
