@@ -1,1 +1,3 @@
-# bank-go-backend
+# Expense Tracker Backend in Golang
+
+Based on youtube tutorial
