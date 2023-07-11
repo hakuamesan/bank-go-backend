@@ -10,3 +10,8 @@ migrate create -ext sql -dir db/migration -seq init_schema
 
 docker exec -it postgres15 createdb --username=root --owner=root simple_bank
 
+# install sqlc
+# https://github.com/kyleconroy/sqlc
+
+mkdir -p db/query db/sqlc
+
