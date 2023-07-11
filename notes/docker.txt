@@ -1,0 +1,12 @@
+docker pull postgres:alpine
+docker run --name postgres15 -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=mysecretpassword -d postgres:15-alpine
+
+# table-plus to create the database tables
+
+# install golang-migrate
+# https://github.com/golang-migrate/migrate/releases/tag/v4.16.2
+
+migrate create -ext sql -dir db/migration -seq init_schema
+
+docker exec -it postgres15 createdb --username=root --owner=root simple_bank
+
